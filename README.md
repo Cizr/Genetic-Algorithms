@@ -44,6 +44,3 @@ In this repository, you'll find Python implementations of various optimization a
 
 Feel free to contribute by creating **pull requests** or opening **issues** if you have suggestions, improvements, or any questions!
 
-### Sources:
-- "A Comprehensive Review of Bat Inspired Algorithm: Variants, Applications, and Hybridization" by Mohammad Shehab et al. (2022)
-- "Recent Advances of Bat-Inspired Algorithm, Its Versions and Applications" by Zaid Abdi Alkareem Alyasseri et al. (2022)
