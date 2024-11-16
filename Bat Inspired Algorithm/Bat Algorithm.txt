@@ -1,0 +1,39 @@
+Algorithm BatAlgorithm(num_agents, max_iterations):
+    # INPUT
+    #    num_agents = number of bats
+    #    max_iterations = the maximum number of iterations
+    # OUTPUT
+    #    The current best solution Gbest
+
+    Initialize Xi (i = 1, 2, ..., num_agents) randomly       # Initial positions
+    Initialize Vi (i = 1, 2, ..., num_agents) randomly       # Initial velocities
+    Initialize Fi (i = 1, 2, ..., num_agents) randomly within a specified range    # Initial frequencies
+    Initialize ri (i = 1, 2, ..., num_agents) to a small value       # Initial loudness
+    Initialize Ai (i = 1, 2, ..., num_agents) to a moderate value    # Initial pulse emission rates
+
+    while t < max_iterations:
+        for i = 1 to num_agents:
+            # Adjust frequency and update velocities and positions
+            Generate new solutions by adjusting frequency
+
+            # Update the position and velocity of each bat
+            Update velocities and positions:
+                xi(t+1) = xi(t) + vi(t+1)
+
+            # If rand > ri, generate a local solution around the best solution
+            if rand > ri[i]:
+                Select a solution from the best bats randomly
+                Generate a local solution around the selected best solution
+
+            # Randomly explore the search space (exploration phase)
+            Generate a new solution by flying randomly
+
+            # Accept new solutions based on fitness and probability
+            if rand < Ai[i] and f(xi) < f(Gbest):
+                Accept the new solution (update position and velocity)
+                Increase ri (loudness) and reduce Ai (pulse emission rate)
+
+        # Rank the bats based on fitness and find the current Gbest (best solution)
+        Rank the bats and update the global best solution Gbest
+
+    return Gbest  # Return the best solution found
